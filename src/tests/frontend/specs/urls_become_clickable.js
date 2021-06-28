@@ -28,7 +28,7 @@ describe('urls', function () {
   });
 
   describe('special characters inside URL', function () {
-    for (const char of '-:@_.,~%+/?=&#!;()$\'*') {
+    for (const char of '-:@_.,~%+/?=&#!;()\\[\\]$\'*') {
       const url = `https://etherpad.org/${char}foo`;
       it(url, async function () {
         await helper.edit(url);
